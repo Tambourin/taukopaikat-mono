@@ -7,6 +7,9 @@ let databaseUri = "mongodb://localhost:27017/taukopaikatfi";
 if(process.env.NODE_ENV === "production") {
   databaseUri = process.env.MONGODB_URI;
 }
+if(process.env.NODE_ENV === "test") {
+  databaseUri = process.env.MONGODB_TEST_URI;
+}
 
 mongoose.set("useFindAndModify", false);
 mongoose.connect(databaseUri, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -15,7 +18,8 @@ mongoose.connect(databaseUri, { useNewUrlParser: true, useUnifiedTopology: true 
 
 const server = http.createServer(app);
 
-server.listen(process.env.PORT, () => {
+const port = process.env.PORT ? process.env.PORT : 3001;
+server.listen(port, () => {
   console.log("listening port:", process.env.PORT);
 });
 

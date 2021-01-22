@@ -8,6 +8,8 @@
     "build": "cd ./front && react-scripts build",
     "watch": "NODE_ENV=development nodemon ./server/index.js",
     "start": "NODE_ENV=production node ./server/index.js",
+    "start:test": "cross-env NODE_ENV=test node ./server/index.js",
+    "test:e2e": "cypress run --headless ./front",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix"
   },
