@@ -1,0 +1,108 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Vaskikello",
+      "votes": 37,
+      "highway": "4",
+      "address": "Vaskikellontie 420 86800 Pyhäsalmi",
+      "city": "Pyhäjärvi",
+      "www": "https://vaskikello.fi",
+      "coordinates": {
+        "lat": 63.713902,
+        "lng": 25.919409
+      },
+      "images": [
+        "https://vaskikello.fi/img/1527505060096913.png"
+      ],
+      "description": "Vaikka Vaskikellon ravintola on tuttavallisen pieni, 82 paikkainen, olemme palvelleet sesonkiaikoina tuhansia asiakkaita päivässä, puoli miljoonaa vuodessa. Kesällä ulkoterassilla on tilaa. ",
+      "services": {
+        "doesNotBelongToChain": true,
+        "isOpenTwentyFourHours": false,
+        "hasPlayground": false,
+        "hasRestaurant": true,
+        "hasCofee": true,
+        "isAttraction": true
+      },
+      "comments": [
+        {
+          "content": "Taas eka kommentti",
+          "author": "Olai Hartonen",
+          "date": "2019-09-03T09:53:40.889Z",
+          "id": 7100
+        },
+        {
+          "content": "Mihin ne kommentit sitten äsken katosi?\n",
+          "author": "Olai Hartonen",
+          "date": "2019-09-03T09:54:42.833Z",
+          "id": 748
+        },
+        {
+          "content": "On tää ihan hyvä paikka. Vaikkakin vähän jo kulahtanut.",
+          "author": "Olai Hartonen",
+          "date": "2019-09-03T11:05:30.632Z",
+          "id": 6203
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Abc Hirvaskangas",
+      "votes": 50,
+      "highway": "4",
+      "address": "Suonenjoentie 10, 44250 Koivisto",
+      "city": "Äänekoski",
+      "coordinates": {
+        "lat": 62.517555,
+        "lng": 25.691022
+      },
+      "www": "https://www.abcasemat.fi/fi/asemat/abc-hirvaskangas-aanekoski-542466446",
+      "images": [
+        "https://sipa.s-palvelut.fi/?url=https%3A%2F%2Flaari.sok.fi%2Fdocuments%2F767684%2F904471%2FABC_Hirvaskangas_aseman_kuva.jpg%2Fc5b5c855-caab-4e4b-9a6e-883932dccbf7%3Ft%3D1387287133631&maxWidth=768&checksum=369aed3172bd93a2a8e3df6cd6b28192"
+      ],
+      "description": "Hirvaskangas on tuttu ja legendaarinen pysähdyspaikka Nelostien kulkijoille. ABC Hirvaskangas sijaitsee 33 kilometriä Jyväskylästä pohjoiseen Äänekoskella Nelostien (E75) varrella. Tarjoamme viihtyisät tilat ja monipuoliset palvelut.",
+      "services": {
+        "doesNotBelongToChain": false,
+        "isOpenTwentyFourHours": true,
+        "hasPlayground": true,
+        "hasRestaurant": true,
+        "hasCofee": true,
+        "isAttraction": false
+      },
+      "comments": []
+    },
+    {
+      "id": 3,
+      "name": "Design Hill",
+      "votes": 1,
+      "highway": "1",
+      "address": "Vaskiontie 41824800 Halikko",
+      "city": "Salo",
+      "coordinates": {
+        "lat": 60.423864,
+        "lng": 23.047332
+      },
+      "www": "https://designhill.fi/",
+      "images": [
+        "https://d42y9z8h631ib.cloudfront.net/kuvat/jpg/1600x400/444971.jpg"
+      ],
+      "description": "String",
+      "services": {
+        "doesNotBelongToChain": true,
+        "isOpenTwentyFourHours": false,
+        "hasPlayground": false,
+        "hasRestaurant": true,
+        "hasCofee": true,
+        "isAttraction": false
+      },
+      "comments": [
+        {
+          "content": "Täällä tulee joskus käytyä matkalla Turkuun.\n",
+          "author": "Olai Hartonen",
+          "date": "2019-09-04T06:44:45.369Z",
+          "id": 4384
+        }
+      ]
+    }
+  ]
+}
