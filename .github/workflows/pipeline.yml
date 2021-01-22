@@ -19,4 +19,15 @@ jobs:
       - name: Npm install
         run: npm install
       - name: Lint
-        run: npm run eslint 
+        run: npm run eslint
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        if: ${{ github.event_name == 'push' && contains(join(github.event.commits.*.message), '#skip') == false }}
+        uses: akhileshns/heroku-deploy@v3.8.9
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: taukopaikat-mono 
+          heroku_email: "jirka.hartonen@gmail.com"
+          healthcheck: "https://taukopaikat-mono.herokuapp.com"          
+          rollbackonhealthcheckfailed: true
