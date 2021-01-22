@@ -4,7 +4,7 @@ const http = require("http");
 const mongoose = require("mongoose");
 
 let databaseUri = "mongodb://localhost:27017/taukopaikatfi";
-if(process.env.NODE_ENV === "production") {
+if(process.env.NODE_ENV === "production" || process.env.NODE_ENV === "cypress-test") {
   databaseUri = process.env.MONGODB_URI;
 }
 if(process.env.NODE_ENV === "test") {
@@ -20,7 +20,7 @@ const server = http.createServer(app);
 
 const port = process.env.PORT ? process.env.PORT : 3001;
 server.listen(port, () => {
-  console.log("listening port:", process.env.PORT);
+  console.log("listening port:", port);
 });
 
 
