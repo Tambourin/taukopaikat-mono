@@ -1,5 +1,8 @@
 {
   "name": "taukopaikat",
+  "engines": {
+    "node": "15.x"
+  },
   "scripts": {
     "my-app:eslint": "eslint './apps/my-app/src/**/*.{jsx,js,tsx,ts}'",
     "build": "cd ./front && react-scripts build",
