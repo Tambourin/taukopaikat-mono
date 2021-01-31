@@ -45,7 +45,7 @@ const Footer = () => {
         </Grid.Column>
       </Grid>
       <div style={copyrightStyle}> 
-        © 2019 Olavi Hartonen 
+        © 2021 Olavi Hartonen 
         <Image  src="https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png" />
       </div>
     </footer>
