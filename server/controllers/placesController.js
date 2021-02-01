@@ -2,6 +2,7 @@ require("dotenv").config();
 const router = require("express").Router();
 const Place = require("../models/placeModel");
 const cache = require("../middleware/cache");
+const fetch = require("node-fetch");
 const googleService = require("../services/googleService");
 const imageService = require("../services/imageService");
 
@@ -23,6 +24,13 @@ router.get(
   },
   cache.setCache
 );
+
+router.get("/image/:googleImageId/:width", (request, response) => {
+  fetch(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=${request.params.width}&photoreference=${request.params.googleImageId}&key=${process.env.GOOGLE_API_KEY}`)
+    .then(res => {
+      res.body.pipe(response);
+    });
+});
 
 router.get(
   "/:PlaceId",

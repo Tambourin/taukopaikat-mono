@@ -1,6 +1,9 @@
 import React from "react";
 import { Image } from "semantic-ui-react";
 
+const BASE_GOOGLE_IMAGE_URL = process.env.NODE_ENV === "development" 
+  ? "http://localhost:3001/api/places/image" 
+  : "/api/places/image";
 const BASE_IMAGE_URL = "https://res.cloudinary.com/drugozaqq/image/upload/";
 const DEFAULT_IMAGE = "placeholder.png";
 
@@ -21,12 +24,11 @@ const PlaceImage = ({ imageId, googleImageId, height, big}) => {
   const imageUrl333 = `${BASE_IMAGE_URL}w_${333},d_${DEFAULT_IMAGE}/${imageId}`;
   const imageUrl650 = `${BASE_IMAGE_URL}w_${650},d_${DEFAULT_IMAGE}/${imageId}`;
   const imageUrl1200 = `${BASE_IMAGE_URL}w_${1200},d_${DEFAULT_IMAGE}/${imageId}`;
- 
-  const googleImageUrl290 = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=290&photoreference=${googleImageId}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
-  const googleImageUrl333 = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=333&photoreference=${googleImageId}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
-  const googleImageUrl650 = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=650&photoreference=${googleImageId}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
-  const googleImageUrl1200 = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=${googleImageId}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
 
+  const googleImageUrl290 = `${BASE_GOOGLE_IMAGE_URL}/${googleImageId}/290`;
+  const googleImageUrl333 = `${BASE_GOOGLE_IMAGE_URL}/${googleImageId}/290`;
+  const googleImageUrl650 = `${BASE_GOOGLE_IMAGE_URL}/${googleImageId}/290`;
+  const googleImageUrl1200 = `${BASE_GOOGLE_IMAGE_URL}/${googleImageId}/290`;
 
   if(imageId) {
     if(big) {

@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const baseUrl = "/api/places/";
+const baseUrl = process.env.NODE_ENV === "development" 
+  ? "http://localhost:3001/api/places" 
+  : "/api/places";
 
 const setToken = token => {
   axios.defaults.headers.post["Authorization"] = "bearer " + token;
