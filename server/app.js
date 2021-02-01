@@ -16,9 +16,9 @@ if(process.env.NODE_ENV !== "production") {
   app.use(cors());
 }
 if(process.env.NODE_ENV === "production") {
-  app.use(cors({
-    origin: "https://www.taukopaikat.fi"
-  }));
+  //app.use(cors({
+  //  origin: "https://www.taukopaikat.fi"
+  //}));
   app.enable("trust proxy");
   app.use(httpToHttpsRedirect);
 }

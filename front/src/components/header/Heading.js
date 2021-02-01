@@ -72,7 +72,7 @@ const Heading = () => {
   return (
     <header>                      
       <div style={containerStyle}>
-        <Image style={{ width: "100%" }} src={backgroundImage} />
+        <Image style={{ width: "100%", height:"1%" }} src={backgroundImage} />
         <Responsive as={Segment} basic textAlign="center" style={textStyle} minWidth={Responsive.onlyTablet.minWidth}>
           <Transition visible={textIsVisible} animation="fade" duration={TEXT_SPEED}>
            <div>{headingTexts[currentTextIndex]}</div>
